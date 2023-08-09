@@ -1,0 +1,58 @@
+.questions {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: $color-black;
+  border-top: 1px solid $color-1d;
+  border-radius: 64px 64px 0 0;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: -4.8px;
+}
+
+.text {
+  margin-top: 24px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  color: $color-rgba;
+  text-align: center;
+  letter-spacing: -0.64px;
+}
+
+.list-links {
+  display: flex;
+  column-gap: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+  list-style: none;
+}
+
+.list {
+  max-width: 780px;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  list-style: none;
+}
+
+.image {
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.link {
+  font-size: 32px;
+  font-weight: 600;
+  color: $color-blue;
+  text-decoration: none;
+}
+
+.link-text {
+  margin-left: 12px;
+}
