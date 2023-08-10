@@ -1,0 +1,121 @@
+.stake-midas {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: $color-black;
+  border-top: 1px solid $color-1d;
+  border-bottom: 1px solid $color-1d;
+  border-radius: 64px;
+}
+
+.title {
+  max-width: 900px;
+  font-size: 130px;
+  font-weight: 700;
+  line-height: 120px;
+}
+
+.promo {
+  max-width: 732px;
+  padding: 24px 48px;
+  margin-top: 10px;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 100px;
+  letter-spacing: -6px;
+  background: linear-gradient(225deg, #fb4a4a 0%, #9b4cff 100%);
+  border: 1px solid #000;
+  border-radius: 60px;
+  transform: rotate(-2deg);
+}
+
+.text {
+  margin-top: 48px;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 60px;
+  color: $color-rgba;
+  letter-spacing: -1.92px;
+}
+
+.text-span {
+  color: $color-white;
+}
+
+.content-wrapper {
+  display: flex;
+  column-gap: 100px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.ellipse {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  z-index: 0;
+  padding: 500px;
+  background: radial-gradient(
+    38.86% 38.86% at 50% 50%,
+    rgb(255 108 223 / 24%) 0%,
+    rgb(255 108 188 / 0%) 100%
+  );
+  border-radius: 1000px;
+}
+
+.over-text {
+  font-size: 120px;
+  font-weight: 100;
+  line-height: 80px;
+  text-transform: uppercase;
+  letter-spacing: 38.4px;
+  opacity: 0.08;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.item {
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+  margin-top: 64px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.wrapper-image {
+  padding: 26px;
+  border-radius: 50%;
+}
+
+.first-wrapper {
+  background-color: rgb(255 104 195 / 16%);
+}
+
+.second-wrapper {
+  background-color: rgb(234 104 255 / 16%);
+}
+
+.third-wrapper {
+  background-color: rgb(207 104 255 / 16%);
+}
+
+.item-number {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -4.8px;
+}
+
+.item-text {
+  margin-top: 12px;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  color: $color-rgba;
+  letter-spacing: -0.64px;
+}
