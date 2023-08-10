@@ -1,26 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from './accordion.module.scss';
 import classNames from 'classnames/bind';
-import useOpen from 'hooks/open/open';
 
 const cx = classNames.bind(styles);
 
 export const Accordion = ({ section, key }) => {
-  const { isOpen, toggle } = useOpen(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const toggleAccordion = () => {
+    setIsExpanded(!isExpanded);
+    console.log(!isExpanded);
+  };
 
   return (
-    <li className={cx('item', { active: isOpen == true })}>
-      <Title question={section.question} isOpen={isOpen} toggle={toggle} />
-      <Text text={section.text} />
-    </li>
+    <motion.li
+      className={cx('item')}
+      animate={{
+        border: isExpanded ? '1px solid #43a1f7' : '1px solid rgba(255, 255, 255, 0.10)',
+      }}
+    >
+      <Title
+        question={section.question}
+        toggleAccordion={toggleAccordion}
+        isExpanded={isExpanded}
+      />
+      <Text text={section.text} isExpanded={isExpanded} />
+    </motion.li>
   );
 };
 
-export const Title = ({ question, toggle }) => {
+export const Title = ({ question, toggleAccordion, isExpanded }) => {
   return (
-    <div className={cx('title-wrapper')} onClick={toggle}>
+    <div onClick={toggleAccordion} className={cx('title-wrapper')}>
       <h3 className={cx('item-title')}>{question}</h3>
-      <div className={cx('image-wrapper')}>
+
+      <motion.div
+        className={cx('image-wrapper')}
+        initial={{ rotate: 0 }}
+        animate={{
+          rotate: isExpanded ? 180 : 0,
+          backgroundColor: isExpanded ? '#43a1f7' : '#292c33',
+        }}
+      >
         <svg
           className={cx('image')}
           xmlns="http://www.w3.org/2000/svg"
@@ -34,17 +55,28 @@ export const Title = ({ question, toggle }) => {
             fill="white"
           />
         </svg>
-      </div>
+      </motion.div>
     </div>
   );
 };
 
-export const Text = ({ text }) => {
+export const Text = ({ text, isExpanded }) => {
   return (
-    <>
+    <AnimatePresence initial={false}>
       {text.map((e) => {
-        return <p className={cx('item-text')}>{e}</p>;
+        return (
+          isExpanded && (
+            <motion.p
+              className={cx('item-text')}
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+            >
+              {e}
+            </motion.p>
+          )
+        );
       })}
-    </>
+    </AnimatePresence>
   );
 };
