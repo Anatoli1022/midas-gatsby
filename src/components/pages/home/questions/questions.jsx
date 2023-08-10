@@ -14,7 +14,7 @@ const cx = classNames.bind(styles);
 
 const Questions = () => (
   <section className={cx('questions')}>
-    <div className={cx('container', 'container-medium')}>
+    <div className={cx('container')}>
       <h2 className={cx('title')}>Frequently asked questions</h2>
       <p className={cx('text')}>
         Everything you need to know about the Midas. Can’t find the answer you’re looking for? Feel
