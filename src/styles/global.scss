@@ -8,7 +8,23 @@ body {
   font-family: $font-family-primary;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  color: $color-primary;
+  color: $color-white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $color-1d;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  list-style: none;
 }
