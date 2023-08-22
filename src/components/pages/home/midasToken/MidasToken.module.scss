@@ -1,0 +1,185 @@
+.midas-token {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: $color-black;
+  border-top: 1px solid $color-1d;
+  border-bottom: 1px solid $color-1d;
+  border-radius: 64px;
+}
+
+.title {
+  font-size: 130px;
+  font-weight: 700;
+  line-height: 120px;
+  text-align: center;
+  letter-spacing: -7.8px;
+}
+
+.content {
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 160px;
+  
+
+  &:nth-of-type(3) {
+    margin-top: 160px;
+  }
+}
+
+.content-title {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -4.8px;
+}
+
+.text {
+  max-width: 580px;
+  margin-top: 32px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  color: $color-rgba;
+  letter-spacing: -0.64px;
+}
+
+.text-span {
+  color: $color-white;
+}
+
+.block-animation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 579px;
+}
+
+.block-animation-maps {
+  order: -1;
+}
+
+.lightning {
+  transition: $transition-base;
+  animation: light 6s;
+
+  @keyframes light {
+    0% {
+      transform: scale(0.5, 0.5);
+    }
+
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+}
+
+.ellipses-wrapper {
+  position: absolute;
+  width: 579px;
+  height: 579px;
+  overflow: hidden;
+}
+
+.ellipse {
+  position: absolute;
+  transition: $transition-base;
+
+  &:nth-of-type(1) {
+    bottom: 40%;
+    left: -100%;
+    transform: rotate(-80deg);
+    animation: first 4s forwards;
+
+    @keyframes first {
+      0% {
+        left: -30%;
+      }
+
+      100% {
+        left: 0;
+      }
+    }
+  }
+
+  &:nth-of-type(2) {
+    top: -100%;
+    right: 38%;
+    animation: second 4s forwards;
+    animation-delay: 0.5s;
+
+    @keyframes second {
+      0% {
+        top: -30%;
+      }
+
+      100% {
+        top: 0;
+      }
+    }
+  }
+
+  &:nth-of-type(3) {
+    right: -100%;
+    bottom: 40%;
+    transform: rotate(80deg);
+    animation: third 4s forwards;
+    animation-delay: 1s;
+
+    @keyframes third {
+      0% {
+        right: -30%;
+      }
+
+      100% {
+        right: 0;
+      }
+    }
+  }
+
+  &:nth-of-type(4) {
+    right: 38%;
+    bottom: -100%;
+    transform: rotate(160deg);
+    animation: ellipse 4s forwards;
+    animation-delay: 1.5s;
+
+    @keyframes ellipse {
+      0% {
+        bottom: -30%;
+      }
+
+      100% {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.link {
+  display: block;
+  max-width: 256px;
+  padding: 24px 48px;
+  margin-top: 144px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: $color-black;
+  text-align: center;
+  letter-spacing: -0.576px;
+  background-color: $color-white;
+  border: 1px solid $color-white;
+  border-radius: 24px;
+  transition: $transition-base;
+
+  &:hover {
+    color: $color-white;
+    background: none;
+  }
+}
+
+
