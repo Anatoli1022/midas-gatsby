@@ -4,12 +4,16 @@ import Layout from 'components/shared/layout';
 import SEO from 'components/shared/seo';
 import Hero from 'components/pages/home/hero';
 import StakeMidas from 'components/pages/home/stakeMidas';
+import MidasToken from 'components/pages/home/midasToken';
+import Support from 'components/pages/home/support';
 import Questions from 'components/pages/home/questions';
 
 const HomePage = () => (
   <Layout>
     <Hero />
     <StakeMidas />
+    <MidasToken />
+    <Support />
     <Questions />
   </Layout>
 );
