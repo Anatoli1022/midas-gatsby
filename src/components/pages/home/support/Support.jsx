@@ -16,21 +16,16 @@ const Support = () => {
     triggerOnce: true,
   });
 
-  if (inView && currentNumber < 4824884) {
+  if (
+    (inView && currentNumber < 4824884) ||
+    (inView && back < 63884) ||
+    (inView && ellipseHeight <= 512)
+  ) {
     setTimeout(() => {
       setCurrentNumber(currentNumber + 86158);
-    }, 40);
-  }
-
-  if (inView && back < 63884) {
-    setTimeout(() => {
-      setBack(back + 890);
-    }, 40);
-  }
-  if (inView && ellipseHeight <= 512) {
-    setTimeout(() => {
+      setBack(back + 2279);
       setEllipseHeight(ellipseHeight + 8);
-    }, 40);
+    }, 60);
   }
 
   return (
