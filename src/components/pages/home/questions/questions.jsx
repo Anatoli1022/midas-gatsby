@@ -4,7 +4,7 @@ import { Accordion } from 'hooks/accordion/accordion';
 
 import { data } from './data';
 
-import styles from './questions.module.scss';
+import styles from './Questions.module.scss';
 
 import telegram from '../../../../images/telegram.svg';
 import discord from '../../../../images/discord.svg';
@@ -15,7 +15,7 @@ const cx = classNames.bind(styles);
 const Questions = () => (
   <section className={cx('questions')}>
     <div className={cx('container')}>
-      <h2 className={cx('title')}>Frequently asked questions</h2>
+      <h2 className={cx('title-questions')}>Frequently asked questions</h2>
       <p className={cx('text')}>
         Everything you need to know about the Midas. Can’t find the answer you’re looking for? Feel
         free to contact me directly via:

@@ -3,10 +3,11 @@
   padding-bottom: 120px;
   background-color: $color-black;
   border-top: 1px solid $color-1d;
+  border-bottom: 1px solid $color-1d;
   border-radius: 64px 64px 0 0;
 }
 
-.title {
+.title-questions {
   font-size: 80px;
   font-weight: 700;
   line-height: 80px;
