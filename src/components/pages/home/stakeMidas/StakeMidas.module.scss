@@ -1,5 +1,4 @@
 .stake-midas {
-  position: relative;
   padding-top: 120px;
   padding-bottom: 120px;
   background-color: $color-black;
@@ -13,6 +12,7 @@
   font-size: 130px;
   font-weight: 700;
   line-height: 120px;
+  letter-spacing: -7.8px;
 }
 
 .promo {
@@ -43,6 +43,7 @@
 }
 
 .content-wrapper {
+  position: relative;
   display: flex;
   column-gap: 100px;
   align-items: center;
@@ -52,10 +53,10 @@
 
 .ellipse {
   position: absolute;
+  right: 30%;
   bottom: 0;
-  left: 10%;
   z-index: 0;
-  padding: 500px;
+  padding: 400px;
   background: radial-gradient(
     38.86% 38.86% at 50% 50%,
     rgb(255 108 223 / 24%) 0%,
