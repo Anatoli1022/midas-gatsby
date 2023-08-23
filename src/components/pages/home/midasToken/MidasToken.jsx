@@ -1,11 +1,10 @@
 import React from 'react';
-import MapsDots from 'hooks/mapsDots';
-import SplitColumns from 'hooks/splitColumns';
+import MapsDots from './animationComponents/mapsDots/mapsDots';
+import SplitColumns from './animationComponents/splitColumns/splitColumns';
 import { useInView } from 'react-intersection-observer';
 import classNames from 'classnames/bind';
 import styles from './MidasToken.module.scss';
-import ellipse from './images/ellipse.svg';
-import lightning from './images/lightning.svg';
+import Lightning from './animationComponents/lightning/lightning';
 
 const cx = classNames.bind(styles);
 
@@ -26,8 +25,8 @@ const MidasToken = () => {
               <span className={cx('text-span')}> buyback MIDAS token</span> from the open market
             </p>
           </div>
-          <div className={cx('block-animation')}>
-            <SplitColumns />
+          <div>
+            <SplitColumns inView={inView} />
           </div>
         </div>
         <div className={cx('content')}>
@@ -40,8 +39,8 @@ const MidasToken = () => {
               MIDAS token in liquidity pools
             </p>
           </div>
-          <div className={cx('block-animation', 'block-animation-maps')}>
-            <MapsDots />
+          <div className={cx('block-animation-maps')} ref={ref}>
+            <MapsDots inView={inView} />
           </div>
         </div>
         <div className={cx('content')}>
@@ -52,39 +51,8 @@ const MidasToken = () => {
               <span className={cx('text-span')}>to buyback MIDAS token </span> from the open market
             </p>
           </div>
-          <div className={cx('block-animation')}>
-            <img
-              src={lightning}
-              loading="lazy"
-              aria-hidden="true"
-              className={cx(inView ? 'lightning' : null)}
-            />
-            <div className={cx('ellipses-wrapper')} ref={ref}>
-              <img
-                src={ellipse}
-                loading="lazy"
-                aria-hidden="true"
-                className={cx(inView ? 'ellipse' : null)}
-              />
-              <img
-                src={ellipse}
-                loading="lazy"
-                aria-hidden="true"
-                className={cx(inView ? 'ellipse' : null)}
-              />
-              <img
-                src={ellipse}
-                loading="lazy"
-                aria-hidden="true"
-                className={cx(inView ? 'ellipse' : null)}
-              />
-              <img
-                src={ellipse}
-                loading="lazy"
-                aria-hidden="true"
-                className={cx(inView ? 'ellipse' : null)}
-              />
-            </div>
+          <div>
+            <Lightning inView={inView} />
           </div>
         </div>
         <a href="#" className={cx('link')}>
