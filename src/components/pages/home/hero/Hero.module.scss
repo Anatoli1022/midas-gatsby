@@ -63,65 +63,6 @@
   border-radius: 100px;
 }
 
-// .animation-button {
-//   animation: button 3s forwards;
-
-//   @keyframes button {
-//     0% {
-//       background: rgb(255 255 255 / 12%);
-//     }
-
-//     100% {
-//       background: linear-gradient(225deg, #577cff 0%, #4cbfff 100%), #43a1f7;
-//     }
-//   }
-// }
-
-// .ellipse-button {
-//   max-width: 28px;
-//   max-height: 28px;
-//   padding: 6px;
-//   background: rgb(255 255 255 / 12%);
-//   border-radius: 100px;
-// }
-
-// .ellipse-animation {
-//   animation: ellipse 3s forwards;
-
-//   @keyframes ellipse {
-//     0% {
-//       max-width: 28px;
-//     }
-
-//     100% {
-//       margin-left: 24px;
-//       background: $color-white;
-//     }
-//   }
-// }
-
-// .image-gift {
-//   animation: gift 3s forwards;
-
-//   @keyframes gift {
-//     0% {
-//       fill: white;
-//     }
-
-//     100% {
-//       fill: $color-blue;
-//     }
-//   }
-// }
-
-// .btc {
-//   max-width: 72px;
-// }
-
-// .midas {
-//   max-width: 72px;
-// }
-
 .text {
   font-size: 24px;
   font-weight: 600;
