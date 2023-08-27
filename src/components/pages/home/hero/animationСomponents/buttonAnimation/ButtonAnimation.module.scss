@@ -1,20 +1,14 @@
 .animation-get-api {
-    display: flex;
-    column-gap: 20px;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+
+  @include sm-down {
+    height:171px;
   }
-  
-
-
-.text-wrapper {
-  padding-right: 32px;
-  padding-bottom: 24px;
-  padding-left: 32px;
-  text-align: center;
 }
-
 
 .button {
   width: 56px;
@@ -47,7 +41,7 @@
 }
 
 .ellipse-animation {
-  animation: ellipse 3s forwards;
+  animation: ellipse 5s forwards;
 
   @keyframes ellipse {
     0% {
@@ -82,23 +76,3 @@
 .midas {
   max-width: 72px;
 }
-
-// .text {
-//   font-size: 24px;
-//   font-weight: 600;
-//   line-height: 32px;
-//   letter-spacing: -0.576px;
-// }
-
-// .link {
-//   display: inline-block;
-//   margin-top: 12px;
-//   color: $color-rgba;
-//   opacity: 0.6;
-//   transition: $transition-base;
-
-//   &:hover {
-//     color: $color-white;
-//     opacity: 1;
-//   }
-// }
