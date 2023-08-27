@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import styles from './Hero.module.scss';
 import SplitColumns from './animationСomponents/splitColumns';
 import ButtonAnimation from './animationСomponents/buttonAnimation';
+import Diagram from './animationСomponents/diagram/Diagram';
 
 const cx = classNames.bind(styles);
 
@@ -38,7 +39,7 @@ const Hero = () => {
             </div>
           </div>
           <div className={cx('content')}>
-            <div className={cx('block-animation')}></div>
+            <Diagram inView={inView} />
             <div className={cx('text-wrapper')}>
               <p className={cx('text')}>Buybacks & burns supporting MIDAS growth</p>
               <a href="#" className={cx('link')}>

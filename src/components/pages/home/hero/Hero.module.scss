@@ -4,7 +4,13 @@
   background-color: $color-black;
   border-top: 1px solid $color-1d;
   border-bottom: 1px solid $color-1d;
-  border-radius: 64px;
+  border-radius: 0 0 64px 64px;
+
+  @include sm-down {
+    padding-top: 32px;
+    padding-bottom: 24px;
+    border-radius: 0 0 20px 20px;
+  }
 }
 
 .title {
@@ -12,6 +18,12 @@
   font-weight: 700;
   line-height: 120px;
   letter-spacing: -9.1px;
+
+  @include sm-down {
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -2.8px;
+  }
 }
 
 .title-span {
@@ -25,8 +37,15 @@
 
 .content-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
   column-gap: 20px;
+  justify-content: center;
   margin-top: 136px;
+
+  @include sm-down {
+    margin-top: 60px;
+  }
 }
 
 .content {
@@ -45,22 +64,12 @@
   padding-bottom: 24px;
   padding-left: 32px;
   text-align: center;
-}
 
-.animation-get-api {
-  display: flex;
-  column-gap: 20px;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-}
-
-.button {
-  width: 56px;
-  height: 32px;
-  padding: 2px;
-  background: rgb(255 255 255 / 12%);
-  border-radius: 100px;
+  @include sm-down {
+    padding-right: 28px;
+    padding-bottom: 16px;
+    padding-left: 28px;
+  }
 }
 
 .text {
@@ -68,6 +77,13 @@
   font-weight: 600;
   line-height: 32px;
   letter-spacing: -0.576px;
+
+  @include sm-down {
+    max-width: 265px;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+  }
 }
 
 .link {
