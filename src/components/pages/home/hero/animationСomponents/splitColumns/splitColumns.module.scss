@@ -5,6 +5,11 @@
   justify-content: center;
   height: 200px;
   padding: 32px 40px;
+
+  @include sm-down {
+    height: 171px;
+    padding: 12px 24px 24px;
+  }
 }
 
 .sale {
@@ -20,6 +25,10 @@
   height: 14px;
   background: rgb(255 255 255 / 8%);
   border-radius: 8px;
+
+  @include sm-down {
+    width: 20px;
+  }
 }
 
 .animation {

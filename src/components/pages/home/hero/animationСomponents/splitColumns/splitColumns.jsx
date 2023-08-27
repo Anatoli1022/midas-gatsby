@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import styles from './splitColumns.module.scss';
 import classNames from 'classnames/bind';
@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 
 const SplitColumns = ({ inView }) => {
   const columnCount = 10;
-  const animationDelayStep = 0.1; // Adjust this as needed
+  const animationDelayStep = 0.2; // Adjust this as needed
 
   const getColumnStyle = (index) => {
     const animationDelay = index * animationDelayStep + 's';
