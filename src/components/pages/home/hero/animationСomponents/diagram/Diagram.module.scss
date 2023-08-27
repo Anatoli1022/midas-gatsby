@@ -1,0 +1,47 @@
+.diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include sm-down {
+    max-width: 320px;
+    height: 170px;
+  }
+}
+
+.diagram-wrapper {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: -10;
+  height: 126px;
+  overflow: hidden;
+}
+
+.diagram-animation {
+  animation: block 5s forwards;
+
+  @keyframes block {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 300px;
+    }
+  }
+}
+
+.midas {
+  max-width: 100%;
+}
+
+.diagram-image {
+  @include sm-down {
+    max-width: 266px;
+    max-height: 112px;
+  }
+}
