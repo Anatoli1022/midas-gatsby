@@ -5,6 +5,12 @@
   border-top: 1px solid $color-1d;
   border-bottom: 1px solid $color-1d;
   border-radius: 64px;
+
+  @include sm-down {
+    padding-top: 40px;
+    padding-bottom: 24px;
+    border-radius: 20px;
+  }
 }
 
 .title {
@@ -13,6 +19,15 @@
   line-height: 130px;
   text-align: center;
   letter-spacing: -7.8px;
+
+  @include sm-down {
+    max-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.304px;
+  }
 }
 
 .wrapper {
@@ -21,6 +36,11 @@
   align-items: center;
   justify-content: center;
   margin-top: 60px;
+
+  @include md-down {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
 }
 
 .background {
@@ -31,6 +51,13 @@
   min-height: 100%;
   background: linear-gradient(92deg, #ba62ff 0%, #57b1f2 100%);
   filter: blur(120px);
+
+  @include sm-down {
+    top: 20px;
+    right: 0;
+    min-width: 320px;
+    min-height: 320px;
+  }
 }
 
 .content-number {
@@ -38,13 +65,27 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
   row-gap: 16px;
   align-items: center;
   justify-content: center;
   width: 512px;
   height: 512px;
   border-radius: 50%;
+
+  @include md-down {
+    &:nth-of-type(2) {
+      margin-top: -60px;
+    }
+  }
+
+  @include sm-down {
+    width: 293px;
+    height: 293px;
+
+    &:nth-of-type(2) {
+      margin-top: -40px;
+    }
+  }
 }
 
 .numbers {
@@ -52,6 +93,12 @@
   font-weight: 700;
   line-height: 80px;
   letter-spacing: -4.8px;
+
+  @include sm-down {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1.6px;
+  }
 }
 
 .text {
@@ -60,6 +107,12 @@
   line-height: 40px;
   color: $color-rgba;
   letter-spacing: -0.64px;
+
+  @include sm-down {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.256px;
+  }
 }
 
 .ellipse-wrapper {
@@ -69,28 +122,91 @@
   overflow: hidden;
 }
 
+.animation {
+  animation: block 4.3s forwards;
+
+  @keyframes block {
+    0% {
+      height: 0;
+    }
+
+    100% {
+      height: 512px;
+    }
+  }
+
+  @include md-down {
+    animation: block 4.3s forwards;
+
+    @keyframes block {
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: 512px;
+      }
+    }
+  }
+
+  @include sm-down {
+    animation: block 4.3s forwards;
+
+    @keyframes block {
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: 293px;
+      }
+    }
+  }
+}
+
 .ellipse-left {
   top: 0;
   right: -20px;
+
+  @include md-down {
+    right: 0;
+  }
 }
 
 .ellipse-right {
   bottom: 0;
   left: -20px;
+
+  @include md-down {
+    left: 0;
+  }
 }
 
 .ellipse {
   position: absolute;
   width: 512px;
   height: 512px;
+
+  @include sm-down {
+    width: 293px;
+    height: 293px;
+  }
 }
 
 .ellipse-violet {
   top: 0;
   right: 0;
+
+  @include md-down {
+    transform: rotate(90deg);
+  }
 }
 
 .ellipse-blue {
   bottom: 0;
   left: 0;
+
+  @include md-down {
+    transform: rotate(90deg);
+  }
 }

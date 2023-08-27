@@ -10,21 +10,15 @@ const cx = classNames.bind(styles);
 const Support = () => {
   const [currentNumber, setCurrentNumber] = useState(0);
   const [back, setBack] = useState(0);
-  const [ellipseHeight, setEllipseHeight] = useState(0);
 
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
 
-  if (
-    (inView && currentNumber < 4824884) ||
-    (inView && back < 63884) ||
-    (inView && ellipseHeight <= 512)
-  ) {
+  if ((inView && currentNumber < 4824884) || (inView && back < 63884)) {
     setTimeout(() => {
       setCurrentNumber(currentNumber + 86158);
       setBack(back + 2279);
-      setEllipseHeight(ellipseHeight + 8);
     }, 60);
   }
 
@@ -36,10 +30,7 @@ const Support = () => {
           <div className={cx('content-number')}>
             <span className={cx('numbers')}>$ {currentNumber}</span>
             <p className={cx('text')}>Liquidity on DEX</p>
-            <div
-              className={cx('ellipse-wrapper', 'ellipse-left')}
-              style={{ height: `${ellipseHeight}px` }}
-            >
+            <div className={cx('ellipse-wrapper', 'ellipse-left', inView ? 'animation' : null)}>
               <img
                 src={ellipseViolet}
                 alt=""
@@ -52,10 +43,7 @@ const Support = () => {
           <div className={cx('content-number')}>
             <span className={cx('numbers')}>{back}</span>
             <p className={cx('text')}>Bought back MIDAS tokens</p>
-            <div
-              className={cx('ellipse-wrapper', 'ellipse-right')}
-              style={{ height: `${ellipseHeight}px` }}
-            >
+            <div className={cx('ellipse-wrapper', 'ellipse-right', inView ? 'animation' : null)}>
               <img
                 src={ellipseBlue}
                 alt=""
