@@ -5,11 +5,10 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-export const Accordion = ({ section, key }) => {
+export const Accordion = ({ section }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleAccordion = () => {
     setIsExpanded(!isExpanded);
-    console.log(!isExpanded);
   };
 
   return (
@@ -63,10 +62,11 @@ export const Title = ({ question, toggleAccordion, isExpanded }) => {
 export const Text = ({ text, isExpanded }) => {
   return (
     <AnimatePresence initial={false}>
-      {text.map((e) => {
+      {text.map((e, index) => {
         return (
           isExpanded && (
             <motion.p
+              key={index}
               className={cx('item-text')}
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}

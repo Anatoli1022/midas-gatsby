@@ -9,7 +9,7 @@
   }
 
   @include sm-down {
-    padding: 20px 50px 20px 15px;
+    padding: 14px 16px;
   }
 }
 
@@ -17,7 +17,13 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
-  letter-spacing: -0.30px;
+  letter-spacing: -0.3px;
+
+  @include sm-down {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.256px;
+  }
 }
 
 .item-text {
@@ -38,13 +44,25 @@
 
   &::after {
     position: absolute;
-    top: 0;
+    top: 6px;
     left: 0;
-    width: 16px;
+    width: 14px;
     height: 14px;
     content: '';
     background-color: $color-blue;
     border-radius: 50%;
+
+    @include sm-down {
+      left: 10px;
+      width: 9px;
+      height: 9px;
+    }
+  }
+
+  @include sm-down {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.256px;
   }
 }
 
@@ -60,6 +78,11 @@
   right: -6px;
   padding: 10px;
   border-radius: 50%;
+
+  @include sm-down {
+    padding: 0;
+    background: none !important;
+  }
 }
 
 .image {
