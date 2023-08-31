@@ -1,0 +1,44 @@
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $color-black;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-block {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  column-gap: 28px;
+  margin-left: 32px;
+
+  @include sm-down {
+    display: none;
+  }
+}
+
+.link {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $color-white;
+  letter-spacing: -0.256px;
+  opacity: 0.6;
+  transition: $transition-base;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @include sm-down {
+    display: none;
+  }
+}
