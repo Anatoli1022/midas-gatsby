@@ -17,14 +17,14 @@ const TokenMetrics = () => {
     triggerOnce: true,
   });
 
-  if (inView && (volume < 18324 || cap < 47572397 || supply < 27518 || price < 20)) {
+  if (inView && (volume < 110000 || cap < 47572397 || supply < 27518 || price < 20)) {
     setTimeout(() => {
       const newVolume = volume + 1000;
       const newCap = cap + 1585741;
       const newSupply = supply + 2000;
       const newPrice = price + 1;
 
-      if (newVolume < 183241) {
+      if (newVolume < 110000) {
         setVolume(newVolume);
       }
       if (newCap < 47572397) {
@@ -36,7 +36,7 @@ const TokenMetrics = () => {
       if (newPrice < 20) {
         setPrice(newPrice);
       }
-    }, 120);
+    }, 40);
   }
 
   return (
@@ -73,11 +73,17 @@ const TokenMetrics = () => {
           </div>
           <div className={cx('wrapper-links')}>
             <a href="" className={cx('link')}>
-              <img src={fox} alt="" loading="lazy" aria-hidden="true" />{' '}
+              <img
+                src={fox}
+                alt=""
+                loading="lazy"
+                aria-hidden="true"
+                className={cx('image-icon')}
+              />{' '}
               <p className={cx('text-link')}>Add to Metamask &rarr;</p>
             </a>
             <a href="" aria-hidden="true" className={cx('link')}>
-              <img src={chain} alt="" />
+              <img src={chain} alt="" className={cx('image-icon')} />
               <p className={cx('text-link')}>Smart contract &rarr;</p>
             </a>
           </div>
