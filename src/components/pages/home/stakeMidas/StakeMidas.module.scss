@@ -5,6 +5,12 @@
   border-top: 1px solid $color-1d;
   border-bottom: 1px solid $color-1d;
   border-radius: 64px;
+
+  @include sm-down {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 24px;
+  }
 }
 
 .title {
@@ -13,6 +19,12 @@
   font-weight: 700;
   line-height: 120px;
   letter-spacing: -7.8px;
+
+  @include sm-down {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.304px;
+  }
 }
 
 .promo {
@@ -27,6 +39,14 @@
   border: 1px solid #000;
   border-radius: 60px;
   transform: rotate(-2deg);
+
+  @include sm-down {
+    max-width: 310px;
+    padding: 12px 24px;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1.92px;
+  }
 }
 
 .text {
@@ -36,6 +56,14 @@
   line-height: 60px;
   color: $color-rgba;
   letter-spacing: -1.92px;
+
+  @include sm-down {
+    margin-top: 28px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+  }
 }
 
 .text-span {
@@ -49,20 +77,11 @@
   align-items: center;
   justify-content: center;
   margin-top: 64px;
-}
 
-.ellipse {
-  position: absolute;
-  right: 30%;
-  bottom: 0;
-  z-index: 0;
-  padding: 400px;
-  background: radial-gradient(
-    38.86% 38.86% at 50% 50%,
-    rgb(255 108 223 / 24%) 0%,
-    rgb(255 108 188 / 0%) 100%
-  );
-  border-radius: 1000px;
+  @include sm-down {
+    flex-direction: column;
+    margin-top: 48px;
+  }
 }
 
 .over-text {
@@ -74,9 +93,24 @@
   opacity: 0.08;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
+
+  @include sm-down {
+    font-size: 64px;
+    line-height: 64px;
+    writing-mode: horizontal-tb;
+    transform: rotate(0);
+  }
+}
+
+.list {
+  @include sm-down {
+    margin-top: 32px;
+  }
 }
 
 .item {
+  position: relative;
+  z-index: 1;
   display: flex;
   column-gap: 40px;
   align-items: center;
@@ -85,11 +119,24 @@
   &:first-child {
     margin-top: 0;
   }
+
+  @include sm-down {
+    column-gap: 16px;
+    margin-top: 32px;
+  }
 }
 
 .wrapper-image {
   padding: 26px;
   border-radius: 50%;
+
+  @include sm-down {
+    padding: 15px;
+  }
+}
+
+.image {
+  max-width: 28px;
 }
 
 .first-wrapper {
@@ -109,6 +156,12 @@
   font-weight: 700;
   line-height: 80px;
   letter-spacing: -4.8px;
+
+  @include sm-down {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.024px;
+  }
 }
 
 .item-text {
@@ -119,4 +172,30 @@
   line-height: 40px;
   color: $color-rgba;
   letter-spacing: -0.64px;
+
+  @include sm-down {
+    margin-top: 4px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.256px;
+  }
+}
+
+.ellipse {
+  position: absolute;
+  right: 30%;
+  bottom: 0;
+  z-index: 0;
+  padding: 400px;
+  background: radial-gradient(
+    38.86% 38.86% at 50% 50%,
+    rgb(255 108 223 / 24%) 0%,
+    rgb(255 108 188 / 0%) 100%
+  );
+  border-radius: 1000px;
+
+  @include sm-down {
+    right: 0;
+    padding: 250px;
+  }
 }
