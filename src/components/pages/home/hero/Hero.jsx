@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 
 const Hero = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
   return (
     <section className={cx('hero')}>
