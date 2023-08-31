@@ -5,6 +5,12 @@
   border-top: 1px solid $color-1d;
   border-bottom: 1px solid $color-1d;
   border-radius: 64px 64px 0 0;
+
+  @include sm-down {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    border-radius: 20px 20px 0 0;
+  }
 }
 
 .title-questions {
@@ -13,6 +19,12 @@
   line-height: 80px;
   text-align: center;
   letter-spacing: -4.8px;
+
+  @include sm-down {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.304px;
+  }
 }
 
 .text {
@@ -23,6 +35,13 @@
   color: $color-rgba;
   text-align: center;
   letter-spacing: -0.64px;
+
+  @include sm-down {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+  }
 }
 
 .list-links {
@@ -32,6 +51,10 @@
   justify-content: center;
   margin-top: 48px;
   list-style: none;
+
+  @include sm-down {
+    column-gap: 20px;
+  }
 }
 
 .list {
@@ -40,20 +63,46 @@
   margin-right: auto;
   margin-left: auto;
   list-style: none;
+
+  @include sm-down {
+    max-width: 320px;
+    margin-top: 48px;
+  }
 }
 
 .image {
-  margin-right: 12px;
   vertical-align: middle;
+
+  @include sm-down {
+    display: block;
+    max-width: 24px;
+  }
 }
 
 .link {
+  display: block;
   font-size: 32px;
   font-weight: 600;
   color: $color-blue;
   text-decoration: none;
+  opacity: 0.6;
+  transition: $transition-base;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @include sm-down {
+    padding: 12px;
+    background-color: rgb(67 161 247 / 16%);
+    border-radius: 50%;
+  }
 }
 
 .link-text {
   margin-left: 12px;
+
+  @include sm-down {
+    display: none;
+  }
 }

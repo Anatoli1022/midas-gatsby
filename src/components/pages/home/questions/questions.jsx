@@ -21,22 +21,22 @@ const Questions = () => (
         free to contact me directly via:
       </p>
       <ul className={cx('list-links')}>
-        <li className={cx('item')}>
+        <li>
           <a href="#" className={cx('link')}>
             <img src={telegram} alt="Telegram" className={cx('image')} />
-            <span>Telegram</span>
+            <span className={cx('link-text')}>Telegram</span>
           </a>
         </li>
-        <li className={cx('item')}>
+        <li>
           <a href="#" className={cx('link')}>
             <img src={discord} alt="Discord" className={cx('image')} />
-            <span>Discord</span>
+            <span className={cx('link-text')}>Discord</span>
           </a>
         </li>
-        <li className={cx('item')}>
+        <li>
           <a href="#" className={cx('link')}>
             <img src={support} alt="Support" className={cx('image')} />
-            <span>Support</span>
+            <span className={cx('link-text')}>Support</span>
           </a>
         </li>
       </ul>
