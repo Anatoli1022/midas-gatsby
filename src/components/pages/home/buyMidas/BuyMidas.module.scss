@@ -176,6 +176,8 @@
 }
 
 .mobile-link {
+  display: none;
+
   @include sm-down {
     display: block;
     width: 100%;
