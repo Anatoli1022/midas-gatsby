@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 const Header = () => {
   return (
-    <section className={cx('header')}>
+    <header className={cx('header')}>
       <div className={cx('container')}>
         <div className={cx('navigation')}>
           <div className={cx('left-block')}>
@@ -59,7 +59,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 export default Header;
