@@ -120,6 +120,11 @@
   width: 512px;
   height: 512px;
   overflow: hidden;
+
+  @include sm-down {
+    width: 293px;
+    height: 293px;
+  }
 }
 
 .animation {
