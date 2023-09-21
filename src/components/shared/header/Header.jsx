@@ -21,8 +21,8 @@ const Header = () => {
                 fill="none"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M35.875 21L0 43H41L35.875 21ZM5.125 21L17.0791 29.998L0 43L5.125 21Z"
                   fill="white"
                 />
@@ -30,29 +30,29 @@ const Header = () => {
             </a>
             <ul className={cx('list')}>
               <li>
-                <Link to="" className={cx('link')}>
+                <Link to="/" className={cx('link')}>
                   Platform
                 </Link>
               </li>
               <li>
-                <Link to="" className={cx('link')}>
+                <Link to="/" className={cx('link')}>
                   Midas Coin
                 </Link>
               </li>
               <li>
-                <Link to="" className={cx('link')}>
+                <Link to="/" className={cx('link')}>
                   YAPs
                 </Link>
               </li>
               <li>
-                <Link to="" className={cx('link')}>
+                <Link to="/" className={cx('link')}>
                   Resources
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <Link to="" className={cx('link')}>
+            <Link to="/" className={cx('link')}>
               Aurielien Solamon
             </Link>
             <Menu />

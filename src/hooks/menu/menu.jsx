@@ -8,15 +8,12 @@ const cx = classNames.bind(styles);
 
 const Menu = () => {
   const [menu, setMenu] = useState('');
-  const [navigation, setNavigation] = useState('');
 
   const updateMenu = () => {
     if (menu === '') {
       setMenu('active');
-      setNavigation('active');
     } else {
       setMenu('');
-      setNavigation('active');
     }
   };
 
@@ -42,27 +39,27 @@ const Menu = () => {
       <nav className={cx('navigation', { active: menu === 'active' })}>
         <ul className={cx('list')}>
           <li>
-            <Link to="" className={cx('item-link')}>
+            <Link to="" className={cx('item-link')} onClick={updateMenu}>
               Platform
             </Link>
           </li>
           <li>
-            <Link to="" className={cx('item-link')}>
+            <Link to="" className={cx('item-link')} onClick={updateMenu}>
               Midas Coin
             </Link>
           </li>
           <li>
-            <Link to="" className={cx('item-link')}>
+            <Link to="" className={cx('item-link')} onClick={updateMenu}>
               YAPs
             </Link>
           </li>
           <li>
-            <Link to="" className={cx('item-link')}>
+            <Link to="" className={cx('item-link')} onClick={updateMenu}>
               Resources
             </Link>
           </li>
           <li>
-            <Link to="" className={cx('item-link')}>
+            <Link to="" className={cx('item-link')} onClick={updateMenu}>
               Aurielien Solamon
             </Link>
           </li>
