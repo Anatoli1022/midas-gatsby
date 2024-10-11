@@ -127,48 +127,6 @@
   }
 }
 
-.animation {
-  animation: block 4.3s forwards;
-
-  @keyframes block {
-    0% {
-      height: 0;
-    }
-
-    100% {
-      height: 512px;
-    }
-  }
-
-  @include md-down {
-    animation: block 4.3s forwards;
-
-    @keyframes block {
-      0% {
-        width: 0;
-      }
-
-      100% {
-        width: 512px;
-      }
-    }
-  }
-
-  @include sm-down {
-    animation: block 4.3s forwards;
-
-    @keyframes block {
-      0% {
-        width: 0;
-      }
-
-      100% {
-        width: 293px;
-      }
-    }
-  }
-}
-
 .ellipse-left {
   top: 0;
   right: -20px;
@@ -210,8 +168,9 @@
 .ellipse-blue {
   bottom: 0;
   left: 0;
+  transform: scale(-1, 1) rotate(180deg);
 
   @include md-down {
-    transform: rotate(90deg);
+    transform: scale(-1, 1) rotate(90deg);
   }
 }
