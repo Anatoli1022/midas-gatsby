@@ -4,7 +4,7 @@ import { Accordion } from 'hooks/accordion/accordion';
 
 import { data } from './data';
 
-import styles from './Questions.module.scss';
+import styles from './questions.module.scss';
 
 import telegram from '../../../../images/telegram.svg';
 import discord from '../../../../images/discord.svg';
