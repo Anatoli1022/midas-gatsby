@@ -58,7 +58,7 @@ const Support = () => {
                     r="254.5"
                     transform="matrix(-1 0 0 1 512 0)"
                     stroke="url(#paint0_linear_1_838)"
-                    stroke-width="3"
+                    stroke-width="4"
                   />
                 </mask>
                 <g mask="url(#mask0_1_838)">
@@ -68,7 +68,7 @@ const Support = () => {
                     r="254.5"
                     transform="matrix(-1 0 0 1 512 0)"
                     stroke="url(#paint1_radial_1_838)"
-                    stroke-width="3"
+                    stroke-width="4"
                   />
                   <path d="M474 391L472 387.5L470 390.5L472 393.5L474 391Z" fill="#249DDC" />
                 </g>
@@ -130,7 +130,7 @@ const Support = () => {
                     cy="256"
                     r="254.5"
                     stroke="url(#paint0_linear_1_835)"
-                    stroke-width="3"
+                    stroke-width="4"
                   />
                 </mask>
                 <g mask="url(#mask0_1_835)">
@@ -139,7 +139,7 @@ const Support = () => {
                     cy="256"
                     r="254.5"
                     stroke="url(#paint1_radial_1_835)"
-                    stroke-width="3"
+                    stroke-width="4"
                   />
                 </g>
                 <defs>
